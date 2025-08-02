@@ -42,4 +42,4 @@ npm run dev
 Made with 💻 by [Asad Hussain](https://linkedin.com/in/asad-hussain-765502319)
 ---
 ## LICENSE
-[MIT License]()
+[MIT License](/LICENSE)
