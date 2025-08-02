@@ -23,30 +23,28 @@ function App() {
 
   return (
     <>
-      <div className="h-[300px] w-[600px] rounded-xl border-2 border-pink-500 bg-white flex justify-center p-4 items-center flex-col overflow-hidden">
-        <label className="text-2xl font-semibold mb-2">
+      <div className="w-full max-w-[600px] mx-auto rounded-xl border-2 border-pink-500 bg-white flex flex-col justify-center p-4 items-center overflow-hidden min-h-[300px] mt-6">
+        <label className="text-2xl font-semibold mb-2 text-center">
           Password Generator
         </label>
 
-        <div className="w-full flex mb-4">
+        <div className="w-full flex flex-col sm:flex-row mb-4 gap-2 sm:gap-0">
           <input
             type="text"
-            className="w-full p-3 bg-pink-50 rounded-tl-xl rounded-bl-xl border-2"
+            className="w-full p-3 bg-pink-50 rounded-xl sm:rounded-tl-xl sm:rounded-bl-xl sm:rounded-tr-none sm:rounded-br-none border-2"
             readOnly
             value={pass}
           />
           <button
-            className="p-3 bg-pink-500 rounded-tr-xl rounded-br-xl border-l-0 border-2 border-black text-white font-semibold hover:bg-pink-600"
+            className="p-3 bg-pink-500 rounded-xl sm:rounded-tr-xl sm:rounded-br-xl sm:rounded-tl-none sm:rounded-bl-none border-2 border-black text-white font-semibold hover:bg-pink-600"
             onClick={() => navigator.clipboard.writeText(pass)}
           >
             Copy
           </button>
         </div>
 
-        <div className="flex flex-col items-start w-full px-4">
-          <label className="text-lg font-semibold">
-            Length: {length}
-          </label>
+        <div className="flex flex-col items-start w-full px-2 sm:px-4">
+          <label className="text-lg font-semibold">Length: {length}</label>
           <input
             type="range"
             min="4"
@@ -56,7 +54,7 @@ function App() {
             className="w-full"
           />
 
-          <div className="flex gap-4 mt-3">
+          <div className="flex flex-col sm:flex-row gap-4 mt-3">
             <label className="flex items-center gap-2 text-lg font-semibold">
               <input
                 type="checkbox"
@@ -80,7 +78,7 @@ function App() {
 
         <button
           onClick={PasswordGenerator}
-          className="mt-5 px-6 py-2 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700"
+          className="mt-5 w-full sm:w-auto px-6 py-2 bg-pink-600 text-white font-semibold rounded-lg hover:bg-pink-700"
         >
           Generate Password
         </button>
